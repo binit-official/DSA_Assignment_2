@@ -4,14 +4,17 @@ class person {
     static String name;
     static int age;
 
+    public person(String name, int age) {
+        this.name=name;
+        this.age=age;
+    }
 }
 class employee extends person{
 
     static int eid;
     static double salary;
     public employee(String name, int age, int eid, double salary){
-        person.name =name;
-        person.age=age;
+        super(name,age);
         employee.eid =eid;
         employee.salary =salary;
     }
